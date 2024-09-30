@@ -23,7 +23,7 @@
             color: #FAF9F9;
             padding: 10px 0;
             text-align: center;
-            flex: 0 0 auto; /* Header takes fixed space */
+            flex: 0 0 auto;
         }
         nav {
             margin: 20px 0;
@@ -34,13 +34,13 @@
             color: #FAF9F9;
         }
         nav a:hover {
-            color: #FAF9F9;
-            background-color: #FAF9F9; /* A darker shade */
+            color: #6564DB;
+            background-color: #FAF9F9;
             border-radius: 4px;
             padding: 5px 10px;
         }
         section {
-            width: 100%; /* Full viewport width */
+            width: 100%;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background: #FAF9F9;
@@ -54,25 +54,23 @@
             padding: 10px 0;
             background: #6564DB;
             color: #FAF9F9;
-            flex: 0 0 auto; /* Footer takes fixed space */
+            flex: 0 0 auto;
         }
         .download-image {
-            cursor: pointer; /* Change cursor to pointer for better UX */
-            width: 300px; /* Set desired image width */
-            height: auto; /* Maintain aspect ratio */
+            cursor: pointer;
+            width: 300px;
+            height: auto;
         }
         .about-content {
-            display: flex; /* Use flexbox to align items side by side */
+            display: flex; /* Align items side by side */
             align-items: center; /* Center align vertically */
-            margin-top: 20px; /* Add some space above */
+            margin-top: 20px; /* Space above */
         }
         .about-image {
-            width: 150px; /* Set desired image width */
-            height: auto;
-            margin-right: 20px;
-            border-radius: 8px;
-        }
-      
+            width: 30%; /* Set desired image width */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px; /* Space between image and text */
+            border-radius: 8px; /* Optional: rounded corners */
         }
     </style>
 </head>
@@ -87,18 +85,18 @@
     </nav>
 </header>
 
-<section id="about" style="text-indent: 50px;">
-  <div id="about-content">
+<section id="about">
     <h2>About Me</h2>
-      <p>My name is James Connelly. I am a Computer Engineering student at    the University of South Carolina. I have had a passion for computers and data science since I was young. Since beginning my college journey I have been introduced to so many more fields and utilizations for computing than I ever thought possible. I have also been introduced to so many wonderful professionals, educators, and peers. I can not wait for the next steps in my journey and to see where this passion takes me.</p>
-    <img src="headshotFlannel.jpg" alt="my picture" class="about-image"></img>
-   </div>
+    <div class="about-content">
+        <p>My name is James Connelly. I am a Computer Engineering student at the University of South Carolina. I have had a passion for computers and data science since I was young. Since beginning my college journey I have been introduced to so many more fields and utilizations for computing than I ever thought possible. I have also been introduced to so many wonderful professionals, educators, and peers. I cannot wait for the next steps in my journey and to see where this passion takes me.</p>
+        <img src="my_picture.jpg" alt="James Connelly" class="about-image"> <!-- Ensure correct path -->
+     </div>
 </section>
 
 <section id="resume">
     <h2>Resume</h2>
     <a href="Resume.pdf" target="_blank">
-      <img src="Resume.jpg" alt="Click to download PDF" class="download-image">
+        <img src="Resume.jpg" alt="Click to download PDF" class="download-image">
     </a>
 </section>
 
