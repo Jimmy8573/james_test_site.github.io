@@ -15,23 +15,32 @@
             display: flex;
             flex-direction: column;
             font-family: Arial, sans-serif;
-            background-color: #FAF9F9;
-            color: #433A3F;
+            background-color: #D3D3D3;
+            color: #000000;
         }
         header {
-            background: #6564DB;
-            color: #FAF9F9;
+            display: flex; /* Enable Flexbox */
+            align-items: center; /* Align items vertically */
+            background: #D3D3D3;
+            color: #000000;
             padding: 10px 0;
             text-align: center;
             flex: 0 0 auto;
+            border-bottom: 2px solid #000; /* Add a black border to the bottom */
+        }
+        h1 {
+            margin: 0; /* Remove default margin */
+            flex: 1; /* Allow the title to take up space */
+            text-align: left; /* Align title to the left */
         }
         nav {
-            margin: 20px 0;
+            display: flex; /* Enable Flexbox */
+            justify-content: flex-end; /* Align items to the right */
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #FAF9F9;
+            color: #000000;
         }
         nav a:hover {
             color: #6564DB;
@@ -43,7 +52,7 @@
             width: 100%;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background: #FAF9F9;
+            background: #D3D3D3;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -52,57 +61,101 @@
         footer {
             text-align: center;
             padding: 10px 0;
-            background: #6564DB;
-            color: #FAF9F9;
+            background: #D3D3D3;
+            color: #000000;
             flex: 0 0 auto;
+        }
+        .about-content {
+            max-width: 1200px;
+            display: flex; /* Align items side by side */
+            justify-content: center; /* Align horizontally */
+            align-items: flex-start; /* Align items at the start */
+            margin-top: 20px; /* Space above */
+        }
+        .about-bold {
+            width: 50%; /* Set width for title */
+            margin-right: 70px; /* Space between title and text */
+        }
+        .about-text { 
+            height: auto; 
+            max-width: 600px;
+        }
+        .resume-content {
+            display: flex;
+            align-items: flex-start; /* Align items at the start */
+            max-width: 1200px;
+        }
+        .resume-text {
+            margin-right: 50px; /* Space between title and text */
         }
         .download-image {
             cursor: pointer;
             width: 300px;
             height: auto;
+            margin-left: 20px; /* Space between text and image */
         }
-        .about-content {
-            display: flex; /* Align items side by side */
-            justify-content: center; /align horizontaly
-            align-items: center; /* Center align vertically */
-            margin-top: 20px; /* Space above */
+        .project-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%; /* Allow it to be responsive */
+            max-width: 1200px; /* Limit to 1200px */
+            margin-top: 20px;
+            border: 2px solid #000; /* Add a solid border */
+            padding: 20px; /* Add padding inside the border */
+            border-radius: 5px; /* Optional: round the corners */
+            background: #D3D3D3; /* Background color */
+            transition: background-color 0.3s ease; /* Smooth transition effect */
         }
-        .about-text{ 
-            height: auto; 
-            max-width: 700px;
-        }
-        .about-image {
-            width: 30%; /* Set desired image width */
-            height: auto; /* Maintain aspect ratio */
-            margin-right: 20px; /* Space between image and text */
-            border-radius: 8px; /* Optional: rounded corners */
+        .project-content:hover {
+            background-color: red; /* Change background to red on hover */
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>James Connelly</h1>
+    <h1>JAC</h1>
     <nav>
         <a href="#about">About Me</a>
         <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <section id="about">
-    <h2>About Me</h2>
     <div class="about-content">
-        <p class="about-text">My name is James Connelly. I am a Computer Engineering student at the University of South Carolina. I have had a passion for computers and data science since I was young. Since beginning my college journey I have been introduced to so many more fields and utilizations for computing than I ever thought possible. I have also been introduced to so many wonderful professionals, educators, and peers. I cannot wait for the next steps in my journey and to see where this passion takes me.</p>
-        <img src="headshotFlannel.jpg" alt="James Connelly" class="about-image"> <!-- Ensure correct path -->
-     </div>
+        <div class="about-bold">
+            <h2>Hello, My name is James Connelly</h2>
+            <h2>University of South Carolina '27</h2>
+        </div>
+        <div class="about-text"> 
+            <p>I was first introduced to computing in high school through the Project Lead the Way program.</p>
+            <p>At the University of South Carolina, I have had the opportunity to explore a number of fields within computing and have met so many incredible professors, professionals, and fellow students.</p>
+            <p>I hope to continue my journey in the world of computing and look forward to what the next steps have to offer.</p>
+        </div>
+    </div>
 </section>
 
 <section id="resume">
     <h2>Resume</h2>
-    <a href="resume.pdf" target="_blank">
-        <img src="resume.jpg" alt="Click to download PDF" class="download-image">
-    </a>
+    <div class="resume-content">
+        <div class="resume-text">
+            <p>Back-end development is the area of computing I have dived the deepest into. I am fairly proficient in C++ and Java, and I have also learned Python. Through courses such as Algorithmic Design 1 and 2, as well as Advanced Programming Techniques, I have learned basic data structures, memory management, and efficient program design.</p>
+            <p>I am an active member of the University of South Carolina Cyber Security Club. The club, in addition to Unix/Linux Fundamentals, has taught me how to operate Linux machines, as well as the basics of networking and secure data management, plus many other fields related to modern secure computing.</p>
+            <p>I am also familiar with HTML and CSS; though front-end development is something I do less of, these are still skills that I can utilize from time to time to complete a project.</p>
+        </div>
+        <a href="resume.pdf" target="_blank">
+            <img src="resume.jpg" alt="Click to download PDF" class="download-image">
+        </a>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="project-content">
+        <h2>Projects: Coming Soon</h2>
+    </div>
 </section>
 
 <section id="contact">
